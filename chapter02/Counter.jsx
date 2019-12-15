@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+/* 如果需要类型约束就需要使用 prop-types库 */
 import { PropTypes } from "prop-types";
 
 const buttonStyle = { margin: "10px" };
@@ -34,6 +34,7 @@ class Counter extends Component {
     );
   }
 }
+/* Counter组件的属性类型约束 */
 Counter.propTypes = {
   caption: PropTypes.string.isRequired,
   initValue: PropTypes.number
