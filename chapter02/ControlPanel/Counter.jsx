@@ -17,6 +17,16 @@ class Counter extends Component {
   increment() {
     this.setState({ count: this.state.count - 1 });
   }
+
+  /* componentWillMount */
+  componentWillMount() {
+    console.log(`Enter componentWillMount ${this.props.caption}`);
+  }
+  /* 挂载之后  不适用于服务端渲染 */
+  componentDidMount() {
+    console.log(`Enter componentDidMount ${this.props.caption}`);
+  }
+
   render() {
     const { caption } = this.props;
     return (
